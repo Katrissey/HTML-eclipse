@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es-ES">
+	<head>
+		<meta charset="ISO-8859-1">
+		<title>Ahorcado</title>
+		<script type="text/javascript" src="./js/Ahorcado.js"></script>
+	</head>
+	<body>
+		<h1>AHORCADO</h1> <br>
+		<form>
+			<input type="text" id="oculto1" maxlength="1" readonly>
+			<input type="text" id="oculto2" maxlength="1" readonly>
+			<input type="text" id="oculto3" maxlength="1" readonly>
+			<input type="text" id="oculto4" maxlength="1" readonly>
+			<input type="text" id="oculto5" maxlength="1" readonly>
+		
+			<br><br> <label id="label1">Letra: <input type="text" name="Letra:" value=""></label>
+			<input type="button" value="Probar" onclick="probar ()">
+			<br> <input type="reset" value="Reiniciar">
+		</form>
+		<h3>BIENVENIDO<h3>
+			<script type="text/javascript">
+				let palabraOculta = "bueno";
+				console.log (palabraOculta);
+				alert ("¿Cuál es la palabra oculta?");
+				document.write (oportunidades ());
+			</script>
+		
+	</body>
+</html>

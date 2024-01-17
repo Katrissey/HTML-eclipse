@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang es-ES>
+<head>
+<meta charset="utf-8">
+<title>Calculadora</title>
+<script type="text/javascript">
+	numero;
+	function guardar() {
+		numero = document.getElementById("Número").value;
+	}
+	function sumar() {
+		if (numero!= null) {
+		suma += numero;
+		return suma;
+		}
+	}
+	function restar() {
+		resta -= numero;
+		return resta;
+
+	}
+	function multiplicar() {
+		multiplicacion *= numero;
+		return multiplicacion;
+
+	}
+	function dividir() {
+		division /= numero;
+		return division;
+
+	}
+	function resultado () {
+		if (button=="+") {
+			return sumar;
+
+		}
+		if (button=="-") {
+			return restar;
+
+		}
+		if (button=="x") {
+			return multiplicar;
+
+		}
+		if (button=="/") {
+			return dividir;
+
+		}
+
+	}
+
+</script>
+</head>
+<body>
+	<form>
+		Número: <input id="Número" type="number" name="Número"> <br>
+		<br>
+		Resultado: <input type="number"> <br>
+		<br>
+		<button type="button" onclick=sumar()>+</button>
+		<button type="submit" onclick=restar()>-</button>
+		<button type="submit" onclick=multiplicar()>x</button>
+		<button type="submit" onclick=dividir()>/</button>
+		<br> <br>
+
+		<button type="submit" onclick=Resultado()>Resultado</button>
+
+
+	</form>
+
+</body>
+
+
+</html>
