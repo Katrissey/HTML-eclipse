@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Selectores de jQuery</title>
+    <style>
+    	.titulo{
+		    background-color: orange;
+		}
+    </style>
+    <!-- Para trabajar con jQuery es obligatorio tener esta libreria importada -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script type="text/javascript">
+	    function alertar (){
+			alert("Enviando una alerta");
+		}
+    </script>
+</head>
+<body id="body_eventos">
+	<H1>TITULO DE LA P�GINA 1</H1>
+	<H2>TITULO DE LA P�GINA 2</H2>
+	<H3>TITULO DE LA P�GINA 3</H3>
+    <div>
+        <p id="hello">BIENVENIDO</p>
+    </div>
+ 
+    
+    <script>
+    	//https://api.jquery.com/category/events/
+		$(document).ready(function(){ //imprescindible esta función para que sólo se empiece a cargar javascript
+			$('#hello').click(function(){ //una vez se haya cargado toda la página
+				alert($(this).text()); //el # sirve para llamar/hacer referencia a algo de la página
+		    }); 
+		    
+		    $("h2,h3").click(function(){  //Función ".click" se refiere a una sola pulsación
+		        $(this).hide();  
+		    });  
+
+		    $("h1").dblclick(function(){ // ".dbclick" se refiere a doble pulsación
+		    	alert("Entra") //"alert" hace que aparezca un mensaje en la pantalla, sobre la página, con el contenido especificado
+		       	$("#body_eventos").css("background-color", "red") //dentro de las comillas del paréntesis
+		    });
+		    
+		    $("p").mouseenter(function(){ // ".mouseenter" se refiere a que la acción se lleva a cabo cuando el cursor del mouse entra/se posa
+		    	$("#body_eventos").css("background-color", "blue") //sobre la zona especificada, en este caso, un párrafo normal.
+		    	// una vez se sitúa el cursor sobre un párrafo normal, que es un evento, se desencadena una acción, en este caso,
+		    	//se llama a la zona eventos del body y se cambia el color del cuerpo a azul.
+		    });
+		    
+		    $("p").mouseleave(function(){ // En este caso, cuando el mouse sale del párrafo, se cambia el color del cuerpo a verde.
+		    	$("#body_eventos").css("background-color", "green")
+		    });
+		    
+		});
+    
+		$(window).resize(function(){
+			//alert("Alto: " + $(window).height() + " Ancho: " + $(window).width() );
+			console.log("Alto: " + $(window).height() + " Ancho: " + $(window).width() );
+	    });
+    </script>
+    
+    <p>Probando jQuery</p>
+    <p class="titulo">Probando jQuery</p>
+    <p class="titulo">Probando jQuery</p>
+    
+    <input type="text" id="cajatexto1"></input>
+    <input type="text" id="cajatexto2"></input>
+    <input type="text" id="cajatexto3"></input>
+    
+        <script>
+
+    </script>
+</body>
+</html>
