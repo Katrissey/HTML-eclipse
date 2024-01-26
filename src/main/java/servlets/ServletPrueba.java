@@ -29,9 +29,11 @@ public class ServletPrueba extends HttpServlet {
 
 		//Aquí va el código que queremos que se ejecute cuando se ejecuta el Servlet
 		
-		if (request.getParameter("numero")!=null) {
+		if (request.getParameter("numero")!=null) { //para comprobar que la caja NO está vacía
 			int numero = Integer.parseInt(request.getParameter("numero"));
-			
+			//Si es un número lo que queremos que guarde, como el método "getParameter()" da un String,
+			//habremos de realizar un "parseInt" para transformarlo el número que lo lee como String
+			//en un número verdadero con el que se pueda operar.
 			
 			if (numero%2==0) {
 				response.getWriter().append("<H1>EL numero "+numero+"es par</h1>");
@@ -52,7 +54,7 @@ public class ServletPrueba extends HttpServlet {
 		//dicha información, por ejemplo, para nuestra página de login, que el usuario y la contraseña se guarden
 		//y podamos realizar consulta con alguno de los métodos del DAO para comparar la base de datos con los datos introducidos
 		//y, así, comprobar si los mismos se encuentran en la base de datos o no.
-	System.out.println("Pasando por el post");
+	System.out.println("Pasando por el post"); //Para comprobar que, efectivamente, está paasndo la información por ahí
 		
 		List<String> usuarios = new ArrayList<String>();
 		
