@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<title>Alta de alumnos</title>
+</head>
+
+<body>
+	<p style="color: rgb(0, 0, 255); font-size: 200%; text-align: center;">Formulario de alta de Alumnos.</p>
+	<form action="/ProyectoWebRo/FormularioAltaAlumnos" method="post" id="AltaAlumnosFormulario">
+		<!--hay que poner en el "action" el "url-pattern" no el nombre que le hayamos puesto al archivo del servlet -->
+		Nombre: <input type="text" name="Nombre"> <br>
+		Apellidos: <input type="text" name="Apellidos"> <br>
+
+		<label for="Sexo">Sexo:</label>
+		<input type="radio" name="Sexo" value="Masculino">Masculino
+		<input type="radio" name="Sexo" value="Femenino">Femenino
+		<input type="radio" name="Sexo" value="Otro">Otro<br>
+
+		<br>Escoge tu asignatura favorita: <br>
+		<select name="Escoge_tu_asignatura_favorita">
+			<option value="0">Selecciona una opción</option> <!-- lo que está entre paréntesis es como su id -->
+			<option value="Mat">Matemáticas</option>
+			<option value="Fis">Física</option>
+			<option value="Quim">Química</option>
+		</select>
+		<br><br>
+		
+		Información adicional del alumno: <br>
+		<textarea name = "Información_adicional_del_alumno" rows = "5" cols = "25"></textarea>
+		<br><br>
+		
+		<input type ="submit" value = "Guardar">
+
+	</form>
+
+</body>
+
+</html>
