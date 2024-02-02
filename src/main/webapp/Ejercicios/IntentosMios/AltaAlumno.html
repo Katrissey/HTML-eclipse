@@ -4,19 +4,43 @@
 <head>
 	<meta charset="utf-8">
 	<title>Alta de alumnos</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script type="text/javascript">
+    	//https://api.jquery.com/category/events/
+		/*$(document).ready(function(){      esto asegura que la función no se ejecute hasta que el documento esté cargado totalmente
+			
+			$('#AltaAlumnosFormulario').submit(function(){   con el Hastag (#) llamamos al id que le hemos puesto a nuestro formulario en este documento html
+				
+				alert($('#asignatura').val())
+				if ($('#asignatura').val() ==0){
+					alert("Debes seleccionar una asignatura")
+					$('#asignatura').focus();
+					return false
+				}else{
+					alert("Todo esta correcto")
+					return true
+				}
+				
+				
+		    });  Todo esto puede hacerse así, en jquery, o, como se muestra abajo,
+		    justo al terminar el formulario, con javascript
+		});*/
+		
+</script>
+
 </head>
 
 <body>
 	<p style="color: rgb(0, 0, 255); font-size: 200%; text-align: center;">Formulario de alta de Alumnos.</p>
-	<form action="/ProyectoWebRo/FormularioAltaAlumnos" method="post" id="AltaAlumnosFormulario">
+	<form action="/ProyectoWebRo/FormularioAltaAlumnos" method="post" id="AltaAlumnosFormulario" onsubmit="return enviar()">
 		<!--hay que poner en el "action" el "url-pattern" no el nombre que le hayamos puesto al archivo del servlet -->
-		Nombre: <input type="text" name="Nombre"> <br>
-		Apellidos: <input type="text" name="Apellidos"> <br>
+		Nombre: <input type="text" name="Nombre" placeholder="Introduce tu nombre" tabindex="1" autofocus> <br>
+		Apellidos: <input type="text" name="Apellidos" placeholder="Introduce tu apellido" tabindex="3"> <br>
 
-		<label for="Sexo">Sexo:</label>
-		<input type="radio" name="Sexo" value="Masculino">Masculino
-		<input type="radio" name="Sexo" value="Femenino">Femenino
-		<input type="radio" name="Sexo" value="Otro">Otro<br>
+		Sexo:
+		<input id ="radio1" type="radio" name="Sexo" value="Masculino">Masculino
+		<input id = "radio2" type="radio" name="Sexo" value="Femenino">Femenino
+		<input id = "radio3" type="radio" name="Sexo" value="Otro">Otro<br>
 
 		<br>Escoge tu asignatura favorita: <br>
 		<select name="Escoge_tu_asignatura_favorita">
@@ -28,17 +52,28 @@
 		<br><br>
 		
 		Información adicional del alumno: <br>
-		<textarea name = "Información_adicional_del_alumno" rows = "5" cols = "25"></textarea>
+		<textarea name = "Información_adicional_del_alumno" cols = "25"></textarea> <!-- realmente, en este caso, no es necesario añadir las "rows"-->
 		<br><br>
 		
-		<input type ="submit" value = "Guardar">
+		<input id = "guardar" type ="submit" value = "Guardar">
 
 	</form>
 	
-	<script>
+	<script type="text/javascript">
 		
+		function enviar(){
+			//alert(document.getElementById("asignatura").value)
+			if (document.getElementById("asignatura").value ==0){
+				//alert("Debes seleccionar una asignatura")
+				document.getElementById("asignatura").focus()
+				return false
+			}else{
+				//alert("Todo esta correcto")
+				return true
+			}
+		}
 		
-	</script>
+</script>
 
 </body>
 

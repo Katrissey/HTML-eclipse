@@ -21,7 +21,7 @@
   	<servlet-name>FormularioAltaAlumnos</servlet-name>
   	<display-name>FormularioAltaAlumnos</display-name>
   	<description></description>
-  	<servlet-class>servlets.FormularioAltaAlumnos</servlet-class>
+  	<servlet-class>servlets.ServletFormularioAltaAlumnos</servlet-class>
   </servlet>
   
   <servlet-mapping>
