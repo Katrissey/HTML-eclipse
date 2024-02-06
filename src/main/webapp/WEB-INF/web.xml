@@ -23,6 +23,12 @@
   	<description></description>
   	<servlet-class>servlets.ServletFormularioAltaAlumnos</servlet-class>
   </servlet>
+  <servlet>
+  	<servlet-name>MueblesServlet</servlet-name>
+  	<display-name>MueblesServlet</display-name>
+  	<description></description>
+  	<servlet-class>servlets.MueblesServlet</servlet-class>
+  </servlet>
   
   <servlet-mapping>
   	<servlet-name>ServletPrueba</servlet-name>
@@ -41,5 +47,9 @@
   <servlet-mapping>
   	<servlet-name>FormularioAltaAlumnos</servlet-name>
   	<url-pattern>/FormularioAltaAlumnos</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>MueblesServlet</servlet-name>
+  	<url-pattern>/MueblesServlet</url-pattern>
   </servlet-mapping>
 </web-app>
