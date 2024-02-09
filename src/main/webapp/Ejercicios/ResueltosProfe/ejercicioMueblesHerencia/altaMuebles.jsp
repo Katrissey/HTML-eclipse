@@ -1,9 +1,9 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
+<%@ page language="java" contentType="text/html; charset=utf-8"
+    pageEncoding="utf-8"%>
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="ISO-8859-1">
+<meta charset="utf-8">
 <title>Alta de mobiliario</title>
 <script>
 	
@@ -36,16 +36,16 @@
 	<select id="tipo" name="tipo" onchange="cambioVisibilidad()">
 		<option value="0">Seleccione un mueble</option>
 		<option value="M">Mesa</option>
-		<option value="S">Sofá</option>
-		<option value="L">Lámpara</option>
+		<option value="S">SofÃ¡</option>
+		<option value="L">LÃ¡mpara</option>
 	</select>
 	<br>
 	Nombre <input name="nombre" type="text" placeholder="Nombre del mueble"> <br>
 	Precio <input name="precio" type="number" placeholder="Precio del mueble"><br>
 	
 	<div id="estilo">Estilo <input name="estilo" type="text" placeholder="Estilo de la mesa"><br></div>
-	<div id="color">Color <input name="color" type="text" placeholder="Color del sofá"><br></div>
-	<div id="potencia">Potencia <input name="potencia" type="number" placeholder="Potencia de la lámpara"><br></div>
+	<div id="color">Color <input name="color" type="text" placeholder="Color del sofÃ¡"><br></div>
+	<div id="potencia">Potencia <input name="potencia" type="number" placeholder="Potencia de la lÃ¡mpara"><br></div>
 	
 	<input type="submit" value="Guardar">	
 
