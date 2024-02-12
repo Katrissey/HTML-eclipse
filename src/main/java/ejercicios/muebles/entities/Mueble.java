@@ -22,7 +22,7 @@ public abstract class Mueble {
 	
 			//allocationSize: Cantidad a incrementar de la secuencia cuando se arranca la aplicación
 	@Id
-	@SequenceGenerator (name = "MUEBLEGEN", sequenceName = "MUEBLE_GEN", initialValue = 1, allocationSize = 1)
+	@SequenceGenerator (name = "MUEBLEGEN", sequenceName = "MUEBLE_SEQ", initialValue = 1, allocationSize = 1)
 	@GeneratedValue (strategy = GenerationType.SEQUENCE, generator = "MUEBLEGEN")
 	@Column (name = "ID", nullable = false, updatable = false)
 	private long id;
