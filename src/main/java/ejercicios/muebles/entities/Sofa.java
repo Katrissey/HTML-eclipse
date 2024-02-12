@@ -1,9 +1,24 @@
-package ejercicios.muebles;
+package ejercicios.muebles.entities;
 
+import jakarta.persistence.Column;
+import jakarta.persistence.DiscriminatorValue;
+import jakarta.persistence.Entity;
+
+@Entity
+@DiscriminatorValue (value ="SOFÁ")
 public class Sofa extends Mueble {
 	
 	//Declaramos los atributos de instancia
+	@Column (name = "COLOR", length = 20)
+	
 	private String color;
+
+	/**Generamos el constructor vacío paar que hibernate pueda crear objetod de tipo "Sofa" para crear los elementos "Sofa" de la tabla
+	 *  
+	 */
+	public Sofa() {
+		
+	}
 
 	/**Generamos el constructor con los atributos heredados
 	 * del padre, más el específico de sofá

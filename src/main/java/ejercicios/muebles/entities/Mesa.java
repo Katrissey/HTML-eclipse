@@ -1,11 +1,26 @@
-package ejercicios.muebles;
+package ejercicios.muebles.entities;
 
+import jakarta.persistence.Column;
+import jakarta.persistence.DiscriminatorValue;
+import jakarta.persistence.Entity;
+
+@Entity
+@DiscriminatorValue (value = "MESA")
 public class Mesa extends Mueble {
 
 	//Declaramos los atributos de instancia espacíficos de esta clase,
 	//que se unirán a los heredados del padre.
 	
+	@Column (name = "ESTILO", length = 30)
 	private String estilo;
+
+		
+	/**Generamos el constructor vacío para que hibernate pueda crear objetos de tipo "Mesa" para crear los elementos "Mesa" de a tabla
+	 * 
+	 */
+	public Mesa() {
+	
+	}
 
 	/**Generamos el constructor de la clase Mesa, llamando a los atributos del padre
 	 * y añadiendo el específico de la clase Mesa
