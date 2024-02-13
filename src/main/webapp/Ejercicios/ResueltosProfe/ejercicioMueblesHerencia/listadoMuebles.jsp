@@ -1,9 +1,9 @@
-<%@ page language="java" contentType="text/html; charset=utf-8"
-    pageEncoding="utf-8" import="java.util.Map, java.util.List, ejercicios.resueltosprofe.pojos.muebles.*"%>
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1" import="java.util.Map, java.util.List, ejercicios.muebles.entities.profe.*"%>
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="utf-8">
+<meta charset="ISO-8859-1">
 <title>Insert title here</title>
 </head>
 <body>
@@ -27,7 +27,7 @@
 	} %>
 
 
-<h2>Sof√°s</h2>
+<h2>Sof·s</h2>
 <% 
 	for (Mueble mueble : muebles){
 		if (mueble instanceof Sofa){ 
@@ -38,7 +38,7 @@
 <%		}  
 	} %>
 	
-<h2>L√°mparas</h2>
+<h2>L·mparas</h2>
 <% 
 	for (Mueble mueble : muebles){
 		if (mueble instanceof Lampara){ 

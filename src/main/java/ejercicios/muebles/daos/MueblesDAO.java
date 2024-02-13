@@ -7,7 +7,7 @@ import es.curso.java.hibernate.util.JpaUtil;
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.EntityTransaction;
 
-public class MuebleAbstractDAO {
+public class MueblesDAO {
 	
 	//Definimos, pero no inicializamos de momento, ya lo haremos en los distintos métodos
 	//un atributo de tipo EntityManager, para poder generar después las conexiones a la BBDD
@@ -15,7 +15,7 @@ public class MuebleAbstractDAO {
 
 	private static EntityManager em;
 	
-	static MuebleAbstractDAO mad = new MuebleAbstractDAO ();
+	static MueblesDAO mudao = new MueblesDAO ();
 	
 	protected void iniciarConexion () {
 		
@@ -24,7 +24,7 @@ public class MuebleAbstractDAO {
 	}
 	
 	public static void almacenarEntidad (Mueble mueble) throws HibernateException {
-	  mad.iniciarConexion ();
+	  mudao.iniciarConexion ();
 	  
 	  try {
 	  EntityTransaction transaction = em.getTransaction();
