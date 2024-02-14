@@ -31,6 +31,5 @@ public class Mesa extends Mueble {
 	public void setEstilo(String estilo) {
 		this.estilo = estilo;
 	}
-	
-	
+		
 }

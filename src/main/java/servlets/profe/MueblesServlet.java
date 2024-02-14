@@ -105,11 +105,7 @@ public class MueblesServlet extends HttpServlet {
 		RequestDispatcher rd =  request.getRequestDispatcher("ejercicioMueblesHerencia/listadoMuebles.jsp");
 		
 		rd.forward(request, response);
-		
-		
-		
+						
 	}
-	
-	
-	
+		
 }

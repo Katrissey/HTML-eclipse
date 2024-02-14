@@ -31,5 +31,4 @@ public class Lampara extends Mueble {
 		this.potencia = potencia;
 	}
 	
-	
 }

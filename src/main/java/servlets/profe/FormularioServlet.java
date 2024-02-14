@@ -44,8 +44,6 @@ public class FormularioServlet extends HttpServlet {
 		}
 	}
 	
-	
-
 	/**
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */

@@ -41,7 +41,8 @@ String asignatura = request.getParameter("asignatura")!=null?request.getParamete
 <h1>CREACION ALUMNO</h1>
 <form action="/ProyectoWebProfe/alumno" method="post" id="AlumnoForm" onsubmit="return enviar()">
 	
-	Nombre <input type="text" name="nombre" placeholder="Introduce tu nombre" tabindex="1" autofocus value="<%=nombre%>"><br> 
+	Nombre <input type="text" name="nombre" placeholder="Introduce tu nombre" tabindex="1" autofocus value="<%=nombre%>">
+	<br> 
 	Apellidos <input type="text" name="apellidos" placeholder="Introduce tu apellido" tabindex="2" value="<%=apellidos%>"><br>
 	Sexo: 
 	<input id="radio1" type="radio" name="sex" value="H" <%=sex.equals("H")?"checked":"" %> tabindex="3">Hombre</input>
